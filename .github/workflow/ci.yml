@@ -23,5 +23,8 @@ jobs:
       with:
         chrome-version: latest
 
+    - name: Add Infra directory to Python path
+      run: export PYTHONPATH="$PYTHONPATH:$GITHUB_WORKSPACE/Infra"
+
     - name: Run Selenium Test
       run: python $GITHUB_WORKSPACE/Test/test_get.py
