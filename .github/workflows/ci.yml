@@ -7,6 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       name: Checkout code
+
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -22,5 +23,16 @@ jobs:
       with:
         chrome-version: latest
 
-    - name: Run Selenium Test
-      run: python Test/test_get.py
+    - name: Print Working Directory
+      run: pwd
+
+    - name: Print Working Directory
+      run: echo $GITHUB_WORKSPACE
+
+    - name: Move up one directory level
+      run: cd .. | pwd
+
+
+    - name: Change directory to test script
+      run: cd SpotifyAPITests/Test && python test_get.py
+
