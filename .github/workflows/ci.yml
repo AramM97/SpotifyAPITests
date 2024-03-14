@@ -33,6 +33,5 @@ jobs:
       run: cd .. | pwd
 
 
-    - name: Change directory to test script
-      run: cd SpotifyAPITests/Test && python test_get.py
-
+    - name: Run Selenium Test
+      run: python test_get.py
