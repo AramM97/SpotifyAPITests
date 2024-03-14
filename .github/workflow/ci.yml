@@ -23,6 +23,12 @@ jobs:
       with:
         chrome-version: latest
 
+    - name: Print Working Directory
+      run: pwd
+
+    - name: Print Working Directory
+      run: echo $GITHUB_WORKSPACE
+
     - name: Run Selenium Test
       env:
         PYTHONPATH: $GITHUB_WORKSPACE/Infra
