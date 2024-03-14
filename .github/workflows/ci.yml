@@ -29,6 +29,10 @@ jobs:
     - name: Print Working Directory
       run: echo $GITHUB_WORKSPACE
 
+    - name: Move up one directory level
+      run: cd ..
+
+
     - name: Run Selenium Test
       env:
         PYTHONPATH: $GITHUB_WORKSPACE/Infra
