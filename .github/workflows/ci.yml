@@ -33,7 +33,6 @@ jobs:
       run: cd .. | pwd
 
 
-    - name: Run Selenium Test
-      env:
-        PYTHONPATH: $GITHUB_WORKSPACE/Infra
-      run: python $GITHUB_WORKSPACE/Test/test_get.py
+    - name: Change directory to test script
+      run: cd SpotifyAPITests/Test && python test_get.py
+
