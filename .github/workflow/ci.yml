@@ -23,8 +23,7 @@ jobs:
       with:
         chrome-version: latest
 
-    - name: Change working directory
-      run: cd $GITHUB_WORKSPACE
-
     - name: Run Selenium Test
-      run: python Test/test_get.py
+      env:
+        PYTHONPATH: $GITHUB_WORKSPACE/Infra
+      run: python $GITHUB_WORKSPACE/Test/test_get.py
