@@ -22,5 +22,8 @@ jobs:
       with:
         chrome-version: latest
 
+    - name: Adjust working directory
+      run: cd SpotifyAPITests
+
     - name: Run Selenium Test
       run: python Test/test_get.py
